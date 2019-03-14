@@ -6,16 +6,26 @@ package cw2_toll_road;
     * @author rohansamuelh
     */
 
+/*
+Car.java is a subclass of Vehicle.java
+Stores int numberOfSeats
+*/
 public class Car extends Vehicle
 {
    
-    private int numberofSeats;  
-
+    private int numberOfSeats;  
+    
+    /*
+    Override calculateBasicTripCost
+    Returns 500 if the car has 5 or less seats
+    Returns 600 if the car has more than 5 seats
+    */
+    
     @Override
     public int calculateBasicTripCost() 
     {
         
-        if(numberofSeats <= 5)
+        if(numberOfSeats <= 5)
         {
             return 500;
         }
@@ -27,10 +37,15 @@ public class Car extends Vehicle
               
     }
        
+    /*
+    Create a constructor for Car 
+        And a accessor for the new attribute of this class
+    */
+    
     public Car(String plates, String manufacturer, int seats)
     {
         super(plates, manufacturer);
-        numberofSeats = seats;
+        numberOfSeats = seats;
         
     }
 }

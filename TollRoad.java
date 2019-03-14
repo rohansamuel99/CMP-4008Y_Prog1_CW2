@@ -9,15 +9,29 @@ package cw2_toll_road;
 import java.util.*;
 import java.lang.*;
 
+/* 
+Create two attributes: one to store a collection of CustomerAccount objects
+    And an int moneyMade to keep track of the total money made 
+*/
 public class TollRoad 
 {
-    ArrayList<CustomerAccount> customerAccounts = new ArrayList<>();
+    private ArrayList<CustomerAccount> customerAccounts = new ArrayList<>();
     private int moneyMade = 0;
+    
+    /*
+    addCustomer adds a new account to the list of customers associated with this road
+    */
     
     public void addCustomer(CustomerAccount acc)
     {
         customerAccounts.add(acc);
     }       
+    
+    /*
+    findCustomer searches through the list of customers associated 
+        And return the matching CustomerAccount.
+    If no match is found, a CustomerNotFoundException is thrown
+    */
     
     public CustomerAccount findCustomer(String regNum) throws CustomerNotFoundException
     {
@@ -33,6 +47,14 @@ public class TollRoad
        }
        throw new CustomerNotFoundException();
     }
+    
+    /*
+    chargeCustomer searches through all accounts and return the matching CustomerAccount
+    If no match exists, a CustomerNotFoundException is thrown
+    If a matching account is found, makeTrip() is called on the account
+        If successful this is then added to moneyMade 
+        Else a InsufficientAccountBalanceException is thrown
+    */
     
     public void chargeCustomer(String registrationNumber) throws Exception
     {

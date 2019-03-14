@@ -10,17 +10,22 @@ public abstract class Vehicle
 {
     
     private String registrationPlate;
-    private String Manufacturer;
+    private String manufacture;
     
-    Vehicle (String plates, String manufacturer)
+    /*
+    Create a constructor that has two string arguments
+    and has accessor methods for both the attributes.
+    */
+    
+    public Vehicle (String plates, String manufacturer)
     {
         
         registrationPlate = plates;
-        Manufacturer = manufacturer;
+        manufacture = manufacturer;
         
     }
     
-    public Vehicle Plates(String plates)
+    public Vehicle plates(String plates)
     {
         
         this.registrationPlate=plates;
@@ -35,13 +40,18 @@ public abstract class Vehicle
         
     }
     
-    public Vehicle Manufacturers(String manufacturers)
+    public Vehicle manufacturer(String manufacturer)
     {
         
-        this.Manufacturer=manufacturers;
+        this.manufacture=manufacturer;
         return this;
         
     }
+    
+    /*
+    Create abstract public method that returns int 
+    but doesn't take any arguments
+    */
     
     public abstract int calculateBasicTripCost(); 
     

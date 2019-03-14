@@ -6,6 +6,14 @@ package cw2_toll_road;
     * @author rohansamuelh
     */
 
+/*
+CustomerAccount used to store information about customer 
+    i.e. name, account balance, vehicle, discount type, account balance
+Class also implements an enum - DiscountType 
+    with values: NONE, STAFF, FRIENDS_AND_FAMILY
+Class implements Comparables
+*/
+
 public class CustomerAccount implements Comparable <CustomerAccount>
 {
     
@@ -16,11 +24,7 @@ public class CustomerAccount implements Comparable <CustomerAccount>
     private Vehicle customerVehicle;
     
     private int startingBalance;
-   /* 
-    private String registrationNumber; 
-    
-    private int amount;
-    */
+   
     
     public CustomerAccount(String firstName, String secondName, Vehicle customerVehicle, int currentAccountBalance)
     {
@@ -37,6 +41,10 @@ public class CustomerAccount implements Comparable <CustomerAccount>
         return customerVehicle;
     }
     
+    /*
+    compareTo method should compare this account to another CustomerAccount
+    */
+    
     @Override
     public int compareTo(CustomerAccount o) 
     {
@@ -52,10 +60,19 @@ public class CustomerAccount implements Comparable <CustomerAccount>
     
     private DiscountType discount = DiscountType.NONE;
     
+    /*
+    To set the discount type of this account to be STAFF
+    */
+    
     public void activateStaffDiscount()
     {
         discount = DiscountType.STAFF;    
     }
+    
+    /*
+    To set the discount type of this account to be FRIENDS_AND_FAMILY
+        But only if the account doesnt already have an active STAFF discount
+    */
     
     public void activateFriendsAndFamilyDiscount()
     {
@@ -65,20 +82,38 @@ public class CustomerAccount implements Comparable <CustomerAccount>
         }   
     }
     
+    /*
+    Removes any active discount on the account
+    */
+    
     public void deactivateDiscount()
     {
         discount = DiscountType.NONE;
     }
+    
+    /*
+    Adds more credit to the account balance
+    */
     
     public void addFunds(int amount)
     {
         startingBalance += amount;   
     }
     
+    /*
+    Simulate the customer making a trip on the toll road
+    Then calculate trip cost by calling the correct calculateBasicTripCost method
+    */
+    
     public int makeTrip() throws InsufficientAccountBalanceException
     {
         
         int cost = customerVehicle.calculateBasicTripCost();
+        
+        /*
+        Cost is discounted by 50% for staff members
+            And 10% for friends and family
+        */
         
         if(discount == DiscountType.STAFF)
         {
@@ -88,6 +123,14 @@ public class CustomerAccount implements Comparable <CustomerAccount>
         {
             cost = (int) (0.9 * cost);
         }
+        
+        /*
+        If the account has sufficient funds to make this trip, 
+            The account balance should be reduced by cost of the trip and the method
+            should then return the cost of the trip as an int. 
+        If the account does not have a sufficient balance, 
+            the method should throw an InsufficientAccountBalanceException.
+        */
         
         if(startingBalance >= cost)
         {

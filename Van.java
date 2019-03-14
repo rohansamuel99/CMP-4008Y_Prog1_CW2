@@ -6,10 +6,24 @@ package cw2_toll_road;
     * @author rohansamuelh
     */
 
+/*
+Van.java is a subclass of Vehicle.java
+Stores int payload,
+    To store the amount of cargo(in kilograms)
+*/
+
 public class Van extends Vehicle 
 {
     
     private int payload;
+    
+    /*
+    Override calculateBasicTripCost
+    Returns 500 if the payload is leass than or equal to 600kg
+    Returns 750 if the payload is leass than or equal to 800kg,
+        But greater than 600kg
+    Returns 1000 if the payload is greater than 800kg
+    */
     
     @Override
     public int calculateBasicTripCost()
@@ -32,6 +46,10 @@ public class Van extends Vehicle
         
     }
     
+    /*
+    Create a constructor for Van 
+        To set all the fields
+    */
     
     public Van(String plates, String manufacturer, int payload)
     {

@@ -6,10 +6,22 @@ package cw2_toll_road;
     * @author rohansamuelh
     */
 
+/*
+Truck.java is a subclass of Vehicle.java
+Stores int numTrailers,
+    To store the number of trailer fitted to the truck
+*/
+
 public class Truck extends Vehicle
 {
     
     private int numTrailers;
+    
+     /*
+    Override calculateBasicTripCost
+    Returns 1250 if the truck has no trailer or a single trailer
+    Returns 1500 if the truck has two or more trailers
+    */
     
     @Override
     public int calculateBasicTripCost()
@@ -26,6 +38,11 @@ public class Truck extends Vehicle
         }
         
     }
+    
+    /*
+    Create a constructor for Van 
+        To set all the fields
+    */
     
     public Truck(String plates, String manufacturer, int numTrailers)
     {

@@ -6,6 +6,11 @@ package cw2_toll_road;
     * @author rohansamuelh
     */
 
+/*
+CustomerNotFoundException is a subclass of Exception
+    A default constructor is created
+*/
+
 public class InsufficientAccountBalanceException extends Exception
 {
     public InsufficientAccountBalanceException()
