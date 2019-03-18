@@ -148,6 +148,18 @@ public class CustomerAccount implements Comparable <CustomerAccount>
     {
         CustomerAccount custAccountTest = new CustomerAccount ("Felica","Oates",new Car("PP56ICC","Ford",5),13000);
         System.out.println (custAccountTest.makeTrip());
+        CustomerAccount custAccountTest2 = new CustomerAccount ("Jack","Demonakis",new Car("JD56ICC","Mini",8),1000);
+        System.out.println (custAccountTest2.makeTrip());
+        CustomerAccount custAccountTest3 = new CustomerAccount ("P","Jay",new Van("PJ56ICC","Ford",200),8000);
+        System.out.println (custAccountTest3.makeTrip());
+        CustomerAccount custAccountTest4 = new CustomerAccount ("Matt","Wether",new Van("MW56ICC","Ford",700),12000);
+        System.out.println (custAccountTest4.makeTrip());
+        CustomerAccount custAccountTest5 = new CustomerAccount ("Dan","Gee",new Van("DG56ICC","Ford",2000),18000);
+        System.out.println (custAccountTest5.makeTrip());
+        CustomerAccount custAccountTest6 = new CustomerAccount ("George","Shortman",new Truck("GS56ICC","Leyland",1),20000);
+        System.out.println (custAccountTest6.makeTrip());
+        CustomerAccount custAccountTest7 = new CustomerAccount ("Taylor","Rutt",new Truck("TR56ICC","Leyland",3),9000);
+        System.out.println (custAccountTest7.makeTrip());
         //Testing successful
     }
       

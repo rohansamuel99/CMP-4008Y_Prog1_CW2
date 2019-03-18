@@ -62,6 +62,8 @@ public class Van extends Vehicle
     {
         Van vanTest = new Van("OX164GH","Volkswagen",1500);
         System.out.println(vanTest.calculateBasicTripCost());
+        Van vanTest2 = new Van("OX164GH","Volkswagen",100);
+        System.out.println(vanTest2.calculateBasicTripCost());
         //Testing successful
     }
     

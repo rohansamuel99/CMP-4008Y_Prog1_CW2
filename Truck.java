@@ -56,6 +56,8 @@ public class Truck extends Vehicle
     {
         Truck truckTest = new Truck("OD14STV","Leyland",3);
         System.out.println(truckTest.calculateBasicTripCost());
+        Truck truckTest2 = new Truck("OD14STV","Leyland",1);
+        System.out.println(truckTest2.calculateBasicTripCost());
         //Testing successful
     }
     

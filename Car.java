@@ -53,6 +53,8 @@ public class Car extends Vehicle
     {
         Car carTest = new Car("RS56HPP","Mini",6);
         System.out.println(carTest.calculateBasicTripCost());
+        Car carTest2 = new Car("RS56HPP","Mini",4);
+        System.out.println(carTest2.calculateBasicTripCost());
         //Testing successful
     }
 }
