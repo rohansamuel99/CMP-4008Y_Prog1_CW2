@@ -14,7 +14,7 @@ Should have three attributes:
     main
 */
 
-import java.io.BufferedReader;
+
 import java.io.*;
 import java.util.*;
 
@@ -58,28 +58,28 @@ public class TollRoadMain {
 
             String vehicleMake          = customerHelp[4];
 
-            int vehicleInformation      = Integer.parseInt(customerHelp[5]);
+            int vehicleInf      = Integer.parseInt(customerHelp[5]);
 
             int startingBalance         = Integer.parseInt(customerHelp[6]);
 
             String discountType         = customerHelp[7];
             
-            Vehicle vehicle             = null;
+            Vehicle vehicleInformation             = null;
             
             if(vehicleType.equals("Car"))
             {
-                vehicle = new Car(regNum, vehicleMake, vehicleInformation);
+                vehicleInformation = new Car(regNum, vehicleMake, vehicleInf);
             }
             else if(vehicleType.equals("Truck"))
             {
-                vehicle = new Truck(regNum, vehicleMake, vehicleInformation);
+                vehicleInformation = new Truck(regNum, vehicleMake, vehicleInf);
             }
             else if(vehicleType.equals("Van"))
             {
-                vehicle = new Van(regNum, vehicleMake, vehicleInformation);
+                vehicleInformation = new Van(regNum, vehicleMake, vehicleInf);
             }
 
-            CustomerAccount customerAccount = new CustomerAccount(firstName, lastName, vehicle, startingBalance);
+            CustomerAccount customerAccount = new CustomerAccount(firstName, lastName, vehicleInformation, startingBalance);
            
             if(discountType.equals("STAFF"))
             {

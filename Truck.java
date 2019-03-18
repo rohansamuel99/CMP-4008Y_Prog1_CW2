@@ -52,4 +52,12 @@ public class Truck extends Vehicle
         
     }
     
+    public static void main (String[] args)
+    {
+        Truck truckTest = new Truck("OD14STV","Leyland",3);
+        System.out.println(truckTest.calculateBasicTripCost());
+        //Testing successful
+    }
+    
+    
 }

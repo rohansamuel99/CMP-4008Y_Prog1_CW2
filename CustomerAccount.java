@@ -143,5 +143,12 @@ public class CustomerAccount implements Comparable <CustomerAccount>
         }
         
     }
+    
+    public static void main (String[] args) throws Exception
+    {
+        CustomerAccount custAccountTest = new CustomerAccount ("Felica","Oates",new Car("PP56ICC","Ford",5),13000);
+        System.out.println (custAccountTest.makeTrip());
+        //Testing successful
+    }
       
 }

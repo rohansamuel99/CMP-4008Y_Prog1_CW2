@@ -66,4 +66,11 @@ public class TollRoad
     {
         return moneyMade;
     }
+    
+    public static void main(String[] args)
+    {
+        TollRoad tollRoadTest = new TollRoad();
+        System.out.println(tollRoadTest);
+        //Testing successful
+    }
 }

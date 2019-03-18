@@ -55,4 +55,8 @@ public abstract class Vehicle
     
     public abstract int calculateBasicTripCost(); 
     
+    public static void main (String[] args)
+    {
+        //Cannot create an instance for an abstract class
+    }
 }

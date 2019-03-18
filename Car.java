@@ -48,4 +48,11 @@ public class Car extends Vehicle
         numberOfSeats = seats;
         
     }
+    
+    public static void main (String[] args)
+    {
+        Car carTest = new Car("RS56HPP","Mini",6);
+        System.out.println(carTest.calculateBasicTripCost());
+        //Testing successful
+    }
 }
