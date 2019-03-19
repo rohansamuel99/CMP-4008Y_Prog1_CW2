@@ -58,12 +58,20 @@ public class Van extends Vehicle
         
     }
     
+    @Override
+    public String toString()
+    {
+        String vanString= "Registration Number: " + this.registrationPlate +  ";" + " Vehicle Make: " + this.manufacture 
+                        + ";" +" Cargo Weight: " + this.payload + "kg"+ ";" + " TripCost: " +  calculateBasicTripCost() ;
+        return vanString;
+    }
+    
     public static void main (String[] args)
     {
-        Van vanTest = new Van("OX164GH","Volkswagen",1500);
-        System.out.println(vanTest.calculateBasicTripCost());
-        Van vanTest2 = new Van("OX164GH","Volkswagen",100);
-        System.out.println(vanTest2.calculateBasicTripCost());
+        Van vanTest = new Van("OX164GH","Volkswagen",100);
+        System.out.println(vanTest.toString());
+        Van vanTest2 = new Van("NR164GH","Ford",1500);
+        System.out.println(vanTest2.toString());
         //Testing successful
     }
     

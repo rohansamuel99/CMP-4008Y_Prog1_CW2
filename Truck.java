@@ -52,12 +52,20 @@ public class Truck extends Vehicle
         
     }
     
+    @Override
+    public String toString()
+    {
+        String truckString= "Registration Number: " + this.registrationPlate +  ";" + " Vehicle Make: " + this.manufacture 
+                        + ";" +" Number of Trailers: " + this.numTrailers + ";" + " TripCost: " +  calculateBasicTripCost() ;
+        return truckString;
+    }
+    
     public static void main (String[] args)
     {
-        Truck truckTest = new Truck("OD14STV","Leyland",3);
-        System.out.println(truckTest.calculateBasicTripCost());
-        Truck truckTest2 = new Truck("OD14STV","Leyland",1);
-        System.out.println(truckTest2.calculateBasicTripCost());
+        Truck truckTest = new Truck("OD14STV","Leyland",1);
+        System.out.println(truckTest.toString());
+        Truck truckTest2 = new Truck("WL14OYV","Leyland",3);
+        System.out.println(truckTest2.toString());
         //Testing successful
     }
     

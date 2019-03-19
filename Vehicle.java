@@ -9,8 +9,8 @@ package cw2_toll_road;
 public abstract class Vehicle 
 {
     
-    private String registrationPlate;
-    private String manufacture;
+    String registrationPlate;
+    String manufacture;
     
     /*
     Create a constructor that has two string arguments

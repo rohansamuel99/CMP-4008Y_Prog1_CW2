@@ -49,12 +49,20 @@ public class Car extends Vehicle
         
     }
     
+      @Override
+    public String toString()
+    {
+        String carString= "Registration Number: " + this.registrationPlate +  ";" + " Vehicle Make: " + this.manufacture 
+                        + ";" +" Number Of Seats: " + this.numberOfSeats + ";" + " TripCost: " +  calculateBasicTripCost() ;
+        return carString;
+    }
+    
     public static void main (String[] args)
     {
-        Car carTest = new Car("RS56HPP","Mini",6);
-        System.out.println(carTest.calculateBasicTripCost());
-        Car carTest2 = new Car("RS56HPP","Mini",4);
-        System.out.println(carTest2.calculateBasicTripCost());
+        Car carTest = new Car("RS56HPP","Mini",4);
+        System.out.println(carTest.toString());
+        Car carTest2 = new Car("RT56KHP","Audi",6);
+        System.out.println(carTest2.toString());
         //Testing successful
     }
 }
